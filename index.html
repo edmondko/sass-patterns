@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css framework</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/min/scripts.min.js"></script>
+</head>
+<body>
+
+<section>
+	<div class="container">
+		<h1>Grid system</h1>
+		<hr>
+		<div class="row">
+			<div class="col-12"><div class="demo-col">col full</div></div>
+		</div>
+		<div class="row">
+			<div class="col-6"><div class="demo-col">.col-half</div></div>
+			<div class="col-6"><div class="demo-col">.col-half</div></div>
+		</div>
+		<div class="row">
+			<div class="col-8"><div class="demo-col">.col-8</div></div>
+			<div class="col-4"><div class="demo-col">.col-4</div></div>
+		</div>
+		<div class="row">
+			<div class="col-3"><div class="demo-col">.col-quarter</div></div>
+			<div class="col-9">
+			<div class="row">
+				<div class="col-half">
+					<div class="demo-col">half of 2/3</div>
+				</div>
+				<div class="col-half">
+					<div class="demo-col">half of 2/3</div>
+				</div>
+			</div>
+
+
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+	<h1>Typography</h1>
+	<hr>
+		<div class="row">
+			<div class="col-half">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h3>Heading 4</h3>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+			</div>
+			<div class="col-half">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">Debitis ullam </a>velit expedita. Aspernatur facere minima vitae blanditiis labore. Quibusdam ratione ad, voluptatibus veniam, soluta corporis minus eligendi debitis nesciunt magnam.</p>
+				<p><strong>Lorem</strong> ipsum dolor sit amet, <em>consectetur adipisicing </em>elit. <a href="">Debitis ullam </a>velit expedita. Aspernatur facere minima <strike>vitae blanditiis labore.</strike> Quibusdam ratione ad, voluptatibus veniam, soluta corporis minus eligendi debitis nesciunt magnam.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-half">
+				<h3>Unordered List</h3>
+				<ul>
+					<li><a href="">Item 1</a></li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+					<li>Item 5</li>
+				</ul>
+			</div>
+			<div class="col-half">
+				<h3>Ordered List</h3>
+				<ol>
+					<li><a href="">Item 1</a></li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+					<li>Item 5</li>
+				</ol>
+			</div>
+			<div class="col-12">
+				<blockquote>This is blockquote</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<h1>Buttons</h1>
+		<hr>
+		<div class="row">
+			<div class="col-third">
+				<h3>Button styles</h3>
+				<p  class="btn-cnt left">
+					<button class="btn">Default</button>
+					<button class="btn positive">positive</button>
+					<button class="btn neutral">neutral</button>
+					<button class="btn negative">negative</button>
+
+				</p>
+			</div>
+			<div class="col-third">
+				<h3>Button sizes</h3>
+				<p class="btn-cnt left">
+					<button class="btn small">Small</button>
+					<button class="btn">Default</button>
+					<button class="btn large negative flat">Large</button>
+				</p>
+			</div>
+			<div class="col-third">
+				<h3>HTML elements looking like buttons</h3>
+				<p><button class="btn">Button</button></p>
+				<p><a href="" class="btn positive">Anchor Button</a></p>
+				<p><input type="submit" class="btn negative" value="Submit button"></p>
+				<p><input type="button" class="btn neutral" value="Button input"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			<p class="btn-cnt">
+				<button class="btn flat">Flat Button</button>
+				<button class="btn raised">Raised</button>
+				<button class="btn positive flat">Flat Positive</button>
+				<button class="btn small flat">small flat default</button>
+				<button class="btn large neutral"><i class="fa fa-play"></i>Flat Positive</button>
+				<button class="btn large raised positive">Positive raised large</button>
+			</p>
+			<p class="btn-cnt">
+				<button class="btn circle flat negative"><i class="fa fa-remove"></i></button>
+				<button class="btn circle raised"><i class="fa fa-university "></i></button>
+				<button class="btn circle neutral flat"><i class="fa fa-sun-o"></i></button>
+				<button class="btn circle raised negative"><i class="fa fa-support "></i></button>
+				<button class="btn circle neutral"><i class="fa fa-smile-o "></i></button>
+				<button class="btn circle raised positive"><i class="fa fa-spoon "></i></button>
+			</div>
+			</p>
+		</div>
+	</div>
+
+</section>
+<section>
+		<div class="container">
+			<h1 id="nav-forms">Forms</h1>
+
+			<hr>
+
+			<form action="">
+				<div class="row">
+					<div class="col-half">
+						<fieldset>
+							<legend>Inputs</legend>
+							<!--
+							For the floating labels to work properly without any javascript we need to:
+								1.  add "float-label" class to the "field-group" wrapper
+								2. The label tag must be insert after the input field with class "placeholder"
+								3. the input/textarea element must have required attribute
+							-->
+							<div class="field-group float-label">
+								<input type="text" id="demo-input-1" required pattern=".{1,}">
+								<label class="placeholder" for="demo-input-1">This is a label</label>
+								<p class="help">This is a contextual help for the field above.</p>
+							</div> <!-- end field-group -->
+
+							<div class="field-group float-label field-error">
+								<input type="text" id="demo-input-2" required>
+								<label class="placeholder" for="demo-input-2">Error field</label>
+
+								<p class="help">This is an error message for the field above.</p>
+							</div> <!-- end field-group -->
+
+							<div class="field-group float-label">
+								<textarea name="demo-textarea" id="demo-textarea" required></textarea>
+								<label class="placeholder" for="demo-textarea">This is a label</label>
+							</div> <!-- end field-group -->
+						</fieldset>
+					</div> <!-- end row-half -->
+
+					<div class="col-half">
+						<fieldset>
+							<legend>Radio buttons and checkboxes</legend>
+
+							<div class="field-group">
+								<input type="radio" name="demo-radio" id="demo-radio-1">
+								<label for="demo-radio-1">Radio 1</label>
+
+								<input type="radio" name="demo-radio" id="demo-radio-2">
+								<label for="demo-radio-2">Radio 2</label>
+
+								<input type="radio" name="demo-radio" id="demo-radio-3">
+								<label for="demo-radio-3">Radio 3</label>
+							</div>
+
+							<div class="field-group">
+								<input type="checkbox" id="demo-checkbox" name="demo-checkbox">
+								<label for="demo-checkbox">This is a checkbox</label>
+							</div>
+						</fieldset>
+					</div> <!-- end row-half -->
+				</div> <!-- end row -->
+			</form>
+
+			<div class="row">
+				<div class="col-third">
+					<form action="">
+						<fieldset>
+							<legend>Floating Labels Form </legend>
+
+							<div class="field-group float-label">
+								<input type="text" id="sign-in-username" name="sign-in-username" required>
+								<label class="placeholder" for="sign-in-username">Username: <span class="required">*</span></label>
+							</div>
+
+							<div class="field-group float-label">
+								<input type="password" pattern=".{3,}" id="sign-in-pwd" name="sign-in-pwd" required>
+								<label class="placeholder" for="sign-in-pwd">Password: <span class="required">*</span></label>
+							</div>
+
+							<div class="field-group">
+								<input type="checkbox" id="sign-in-checkbox" name="sign-in-checkbox" />
+								<label for="sign-in-checkbox">Remember me</label>
+							</div>
+							<div class="field-group  btn-cnt right">
+								<input type="submit" class="btn" value="Sign In">
+							</div>
+							<p><em><span class="required">*</span> required fields</em></p>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-third">
+					<form action="">
+						<fieldset>
+							<legend>Normal Sign-up Form</legend>
+
+							<div class="field-group">
+								<label for="sign-up-email">Email address: <span class="required">*</span></label>
+								<input type="email" id="sign-up-email" name="sign-up-email" required>
+								<p class="help">Please enter valid email</p>
+							</div>
+
+							<div class="field-group">
+								<label for="sign-up-name">Username: <span class="required">*</span></label>
+								<input type="text" id="sign-up-username" name="sign-up-username">
+							</div>
+
+							<div class="field-group">
+								<label for="sign-up-pwd">Password: <span class="required">*</span></label>
+								<input type="password" id="sign-up-pwd" name="sign-up-pwd" required>
+							</div>
+
+							<div class="field-group">
+								<label for="sign-up-confirm-pwd">Confirm Password: <span class="required">*</span></label>
+								<input type="password" id="sign-up-confirm-pwd" name="sign-up-confirm-pwd">
+							</div>
+
+							<div class="field-group btn-cnt right">
+								<input type="submit" class="btn positive raised" value="Sign Up">
+							</div>
+
+							<p><em><span class="required">*</span> required fields</em></p>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-third">
+					<form action="">
+						<fieldset>
+							<legend>Contact Form</legend>
+
+							<div class="field-group">
+								<label for="contact-name">Name: <span class="required">*</span></label>
+								<input type="text" id="contact-name" name="contact-name">
+							</div>
+
+							<div class="field-group">
+								<label for="contact-email">Email address: <span class="required">*</span></label>
+								<input type="email" id="contact-email" name="contact-email">
+							</div>
+
+							<div class="field-group">
+								<label for="contact-website">Website:</label>
+								<input type="url" id="contact-website" name="contact-website">
+							</div>
+
+							<div class="field-group">
+								<label for="contact-textarea">Message: <span class="required">*</span></label>
+								<textarea name="contact-textarea" id="contact-textarea" cols="30" rows="10" class="field-fw"></textarea>
+							</div>
+
+							<div class="field-group  btn-cnt right">
+								<button type="submit"  class="btn"><i class="fa fa-paper-plane"></i>Send Message</button>
+
+							</div>
+
+							<p><em><span class="required">*</span> required fields</em></p>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div> <!-- end container -->
+	</section>
+	<section>
+		<div class="container">
+			<h1>Icons - FontAwesome</h1>
+			<hr>
+			<div class="row">
+				<div class="col-3">
+					<h3>Bordered Icons</h3>
+					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
+					<div class="icon-rounded"><i class="fa fa-skype "></i></div>
+					<div class="icon-square"><i class="fa fa-plus-circle"></i></div>
+				</div>
+				<div class="col-3">
+					<h3>Icons Sizes</h3>
+					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
+					<div class="icon-rounded icon-large"><i class="fa fa-skype "></i></div>
+					<div class="icon-square icon-huge"><i class="fa fa-plus-circle"></i></div>
+				</div>
+				<div class="col-3">
+					<h3>Bordered Icons</h3>
+					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
+					<div class="icon-rounded"><i class="fa fa-skype "></i></div>
+					<div class="icon-square"><i class="fa fa-plus-circle"></i></div>
+				</div>
+				<div class="col-3">
+					<h3>Icons Sizes</h3>
+					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
+					<div class="icon-rounded icon-large"><i class="fa fa-skype "></i></div>
+					<div class="icon-square icon-huge"><i class="fa fa-plus-circle"></i></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h1>Feedback Alerts</h1>
+			<hr>
+			<div class="row">
+				<div class="col-half">
+					<h3>Information</h3>
+					<div class="alert-info animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+
+				</div>
+				<div class="col-half">
+					<h3>Error</h3>
+					<div class="alert-error animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-half">
+					<h3>Warning</h3>
+					<div class="alert-warning animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="col-half">
+					<h3>Success</h3>
+					<div class="alert-success animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h1>Animations</h1>
+			<hr>
+			<div class="row animations">
+				<div class="col-2"><button class="btn large raised">bounce</button></div>
+				<div class="col-2"><button class="btn large raised neutral">flash</button></div>
+				<div class="col-2"><button class="btn large raised negative">pulse</button></div>
+				<div class="col-2"><button class="btn large raised positive">shake</button></div>
+				<div class="col-2"><button class="btn large raised negative">wobble</button></div>
+				<div class="col-2"><button class="btn large raised positive">tada</button></div>
+			</div>
+			<div class="row animations">
+
+				<div class="col-2"><button class="btn large raised">hinge</button></div>
+				<div class="col-2"><button class="btn large raised neutral">rollIn</button></div>
+				<div class="col-2"><button class="btn large raised negative">rollOut</button></div>
+				<div class="col-2"><button class="btn large raised">flip</button></div>
+				<div class="col-2"><button class="btn large raised neutral">flipInX</button></div>
+				<div class="col-2"><button class="btn large raised negative">flipInY</button></div>
+
+			</div>
+			<div class="row animations">
+				<div class="col-2"><button class="btn raised positive">lightSpeedIn</button></div>
+				<div class="col-2"><button class="btn raised negative">lightSpeedOut</button></div>
+				<div class="col-2"><button class="btn raised positive">fadeInDownBig</button></div>
+				<div class="col-2"><button class="btn raised positive">flipOutX</button></div>
+				<div class="col-4"><button class="btn raised negative">flipOutY</button></div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+</body>
+</html>

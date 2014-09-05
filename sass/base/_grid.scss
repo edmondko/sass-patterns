@@ -1,0 +1,80 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* Set main container styles */
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+/* Set row styles which contains the columns  */
+.row {
+	margin-right: -$gutter;
+	margin-left: -$gutter;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/* Set columns default styles */
+[class^="col-"] {
+	display: block;
+	float: left;
+	padding: 0 $gutter;
+}
+
+/* Set columns windth */
+@for $i from 1 through $columns-count {
+	.col-#{$i} {
+		width: (100/$columns-count) * $i * 1%;
+	}
+}
+
+/* Set Special column classes */
+.col-quarter {
+	width: (100 / 4) * 1% ;
+}
+.col-three-quarters {
+	width: (100 / 4) * 3% ;
+}
+.col-third {
+	width: (100 / 3) * 1% ;
+}
+.col-two-thirds {
+	width: (100 / 3) * 2% ;
+}
+.col-half {
+	width: (100 / 2) * 1% ;
+}
+
+.row {
+	margin-bottom: 2em;
+}
+
+.demo-col {
+	background-color: #BFFCAD;
+	padding: 10px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+/* shrink the gutter if the screen is smaller than 1024px wide */
+@media screen and (max-width : 1024px) {
+	.row {
+		margin-left: -$gutter/2;
+		margin-right: -$gutter/2;
+	}
+	[class^="col-"] {
+		padding: 0 $gutter/2;
+	}
+}
+/* Set columns to 100% if the screen is small than 768px wide */
+@media screen and (max-width : 768px) {
+	[class^="col-"] {
+		width: 100%;
+	}
+}

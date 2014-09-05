@@ -1,0 +1,9 @@
+{
+	"name": "CssFramework",
+	"version": "0.1.0",
+	"dependencies": {
+		"jquery": "latest",
+		"fontawesome": "latest",
+		"animate.css": "latest"
+	}
+}
