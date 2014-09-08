@@ -1,0 +1,121 @@
+html {
+	font-size: 1em;
+}
+html,
+input,
+button,
+textarea {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+body {
+	color: $text-color;
+	font-family: $font-family;
+	line-height: $baseline;
+}
+p {
+	margin-bottom: $baseline;
+}
+a,
+a:visited {
+	color: $link-color;
+	&:hover {
+		color: $text-color;
+	}
+}
+hr {
+	border: 0;
+	background-color: $hr-color;
+	height: 1px;
+	margin: $baseline 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: $baseline;
+	margin: $baseline 0 $baseline/3;
+}
+h5,
+h6 {
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+h1 {
+	// font-family: Lobster;
+	font-size: $h1-size;
+}
+h2 {
+	font-size: $h2-size;
+}
+h3 {
+	font-size: $h3-size;
+}
+h4 {
+	font-size: $h4-size;
+}
+h5 {
+	font-size: $h5-size;
+}
+h6 {
+	font-size: $h6-size;
+}
+
+ul,
+ol {
+	margin: 0 0 $baseline $baseline;
+}
+ul {
+	list-style: disc outside none;
+}
+ol {
+	list-style: decimal inside none;
+}
+blockquote {
+	color: $light-text;
+	font-style: italic;
+}
+blockquote {
+	display: block;
+	background-color: rgba(0,0,0,.03);
+	padding: 1.5em 1.5em 1.5em 2em;
+	margin: 0 0 $baseline;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,.1);
+	ul,
+	ol,
+	p {
+		margin: 0;
+	}
+	&:before {
+		content: "\201C"; /*Unicode for Left Double Quote*/
+		font-family: Georgia, serif;
+		font-size: 40px;
+		font-weight: bold;
+		color: #999999;
+		position: absolute;
+		left: 5px;
+		top: 10px;
+	}
+
+	&:after {
+		content: "";
+	}
+	text-align: justify;
+}
+
+
+small {
+	font-size: $h5-size;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}

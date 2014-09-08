@@ -1,0 +1,143 @@
+form {
+	.field-group {
+		margin-bottom: $baseline/2;
+		position: relative;
+
+		label {
+			display: block;
+			margin-bottom: 0;
+			font-weight: 700;
+			padding: 0 .5em;
+			color: $light-text;
+			font-size: .75em;
+			text-transform: uppercase;
+			&.placeholder {
+				position: absolute;
+				top: 30px;
+				transition: top .1s ease-out;
+			}
+		}
+
+
+		input:not([class^="btn"]),
+		textarea {
+			transition: all .2s ease-out;
+			border: 1px solid $field-border-color;
+			padding: .5em;
+			width: 100%;
+			font-size: 1em;
+			font-family: $font-family;
+
+			&:focus {
+				outline: none;
+				border-color: $focus-border-color;
+
+			}
+		}
+		textarea {
+			resize: vertical;
+		}
+		.required {
+			font-weight: 700;
+			font-size: 1.5em;
+			color: $error-border-color;;
+		}
+		.help {
+			@extend small;
+			color: $light-text;
+		}
+		/* Floating label styles */
+		&.float-label {
+			padding-top: 24px;
+			input:not([class^="btn"]),
+			textarea {
+				border-width: 0 2px 2px 0;
+
+				&:valid,
+				&:valid:focus {
+					border-color: $valid-border-color;
+					& + .placeholder {
+						top: 0;
+						color: $valid-border-color;
+					}
+				}
+				/* &:invalid,
+				&:invalid:focus {
+					border-color: $error-border-color;
+					& + .placeholder {
+						// top: 0;
+						color: $error-border-color;
+					}
+				} */
+
+				&:focus {
+					outline: none;
+					border-color: $focus-border-color;
+					& + .placeholder {
+						top: 0;
+						color: $focus-border-color;
+					}
+				}
+			}
+		}
+	}
+	fieldset {
+		border: 1px solid $field-border-color;
+		padding: $baseline;
+		margin-bottom: $baseline;
+		legend {
+			font-weight: 700;
+			padding: 1em;
+			margin-bottom: -1em;
+		}
+	}
+
+
+
+	/* Simulate checkbox button /// We can use images or just simulate the styles with CSS3*/
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: none;
+	}
+	input[type="radio"] + label,
+	input[type="checkbox"] + label {
+		padding: 0;
+		text-transform: none;
+		font-size: 1em;
+		line-height: 26px;
+		margin-bottom: 1em;
+		user-select: none;
+		cursor: pointer;
+	}
+	input[type="radio"] + label:before,
+	input[type="checkbox"] + label:before {
+		content: "";
+		line-height: 26px;
+		height: 26px;
+		width: 26px;
+		margin-right: .5em;
+		margin-top: -2px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		display: inline-block;
+		background-image: url("../img/inputs.png");
+		vertical-align: middle;
+		text-align: center;
+	}
+	input[type="radio"]:checked + label,
+	input[type="checkbox"]:checked + label {
+		color: #2C3E50;
+	}
+	input[type="checkbox"]:checked + label:before {
+		background-position: 0 -26px;
+	}
+
+	/* Simulate radio button */
+	input[type="radio"] + label:before {
+		background-position: -34px 0;
+	}
+	input[type="radio"]:checked + label:before {
+		background-position: -34px -26px;
+	}
+}

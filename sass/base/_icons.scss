@@ -1,0 +1,25 @@
+[class^="icon-"] {
+	border: 1px solid $icon-border-color;
+	height: 2em;
+	width: 2em;
+	text-align: center;
+	display: inline-block;
+	padding: .25em;
+	vertical-align: top;
+	margin-bottom: $baseline;
+	i {
+		line-height: 1.5em;
+	}
+}
+.icon-circle {
+	border-radius: 100%;
+}
+.icon-rounded {
+	border-radius: $icon-roundness;
+}
+.icon-large {
+	font-size: 150%;
+}
+.icon-huge {
+	font-size: 200%;
+}

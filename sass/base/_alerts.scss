@@ -1,0 +1,37 @@
+[class^="alert"] {
+	padding: $baseline;
+	margin: $baseline 0;
+	border: 1px solid;
+	border-width: 3px 1px 1px 1px;
+	p {
+		margin: 0;
+	}
+}
+.alert-info {
+	border-color: $info-color;
+	background-color: lighten($info-color, 35%);
+	& :first-child {
+		color: darken($info-color, 10%);
+	}
+}
+.alert-error {
+	border-color: $error-color;
+	background-color: lighten($error-color,35%);
+	& :first-child {
+		color: darken($error-color, 10%);
+	}
+}
+.alert-warning {
+	border-color: $warning-color;
+	background-color: lighten($warning-color,35%);
+	& :first-child {
+		color: darken($warning-color, 10%);
+	}
+}
+.alert-success {
+	border-color: $success-color;
+	background-color: lighten($success-color,35%);
+	& :first-child {
+		color: darken($success-color, 10%);
+	}
+}

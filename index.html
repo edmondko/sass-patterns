@@ -1,79 +1,583 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css framework</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/min/scripts.min.js"></script>
+	<script src="js/min/prism.js"></script>
+</head>
+<body>
+<header id="stickyHeader">
+	<h1 id="heading">Sass Patterns Library</h1>
+	<nav id="mainNav">
+		<ul class="cf">
+			<li><a class="btn raised" href="#grid">Grid</a></li>
+			<li><a class="btn raised" href="#typography">Typography</a></li>
+			<li><a class="btn raised" href="#buttons">Buttons</a></li>
+			<li><a class="btn raised" href="#forms">Forms</a></li>
+			<li><a class="btn raised" href="#icons">Icons</a></li>
+			<li><a class="btn raised" href="#alerts">Alerts</a></li>
+			<li><a class="btn raised" href="#animations">Animations</a></li>
+		</ul>
+	</nav>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="SCSSPattrns : This is a scalable and SCSS Framework I&#39;m building for fast-pace Front-end development">
+</header>
+<section id="grid">
+	<div class="container">
+		<h2>Grid system</h2>
+		<hr>
+		<div class="row">
+			<div class="col-12"><div class="demo-col">col-12 / col-full</div></div>
+		</div>
+		<div class="row">
+			<div class="col-6"><div class="demo-col">col-6 / col-half</div></div>
+			<div class="col-6"><div class="demo-col">col-6 / col-half</div></div>
+		</div>
+		<div class="row">
+			<div class="col-8"><div class="demo-col">col-8 / col-two-thirds</div></div>
+			<div class="col-4"><div class="demo-col">col-4 / col-third</div></div>
+		</div>
+		<div class="row">
+			<div class="col-3"><div class="demo-col">col-quarter/col-3</div></div>
+			<div class="col-9">
+				<div class="row">
+					<div class="col-half">
+						<div class="demo-col">half of 2/3</div>
+					</div>
+					<div class="col-half">
+						<div class="demo-col">half of 2/3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<pre><code class="language-markup">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-12&quot;&gt;col full&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-6&quot;&gt;.col-half&lt;/div&gt;
+	&lt;div class=&quot;col-6&quot;&gt;.col-half&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-8&quot;&gt;.col-8&lt;/div&gt;
+	&lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+	</div>
+</section>
+<section id="typography">
+	<div class="container">
+	<h2>Typography</h2>
+	<hr>
+		<div class="row">
+			<div class="col-4">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h3>Heading 4</h3>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+			</div>
+			<div class="col-4">
+				<h3>Paragraphs</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">Debitis ullam </a>velit expedita. Aspernatur facere minima vitae blanditiis labore. Quibusdam ratione ad, voluptatibus veniam, soluta corporis minus eligendi debitis nesciunt magnam.</p>
+				<p><strong>Lorem</strong> ipsum dolor sit amet, <em>consectetur adipisicing </em>elit. <a href="">Debitis ullam </a>velit expedita. Aspernatur facere minima <strike>vitae blanditiis labore.</strike> Quibusdam ratione ad, voluptatibus veniam, soluta corporis minus eligendi debitis nesciunt magnam.</p>
+			</div>
+			<div class="col-4">
+				<h3>Unordered List</h3>
+				<ul>
+					<li><a href="">Item 1</a></li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+					<li>Item 5</li>
+				</ul>
 
-    <title>SCSSPattrns</title>
-  </head>
+				<h3>Ordered List</h3>
+				<ol>
+					<li><a href="">Item 1</a></li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+					<li>Item 5</li>
+				</ol>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<h3>Blockquote Example</h3>
+				<blockquote>This is blockquote</blockquote>
+			</div>
+			<div class="col-4">
+			<h3>.SCSS Code Example</h3>
+				<pre>
+					<code class="language-scss">
+&.positive {
+	background-color: $btn-positive-bg;
+	&:hover {
+			background-color: lighten($btn-positive-bg, 5%);
+	}
+	&:active {
+			background-color: darken($btn-positive-bg, 5%);
+	}
+}
+					</code>
+				</pre>
+			</div>
+			<div class="col-4">
+			<h3>HTML Code Example</h3>
+				<!-- For markup you need to remove all the < > and replace them wqith html entities like &lt; &gt;  -->
+				<pre>
+					<code class="language-markup">
+&lt;p class=&quot;btn-cnt left&quot;&gt;
+	&lt;button class=&quot;btn small&quot;&gt;Small&lt;/button&gt;
+	&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+	&lt;button class=&quot;btn large negative flat&quot;&gt;Large&lt;/button&gt;
+&lt;/p&gt;
+					</code>
+				</pre>
+			</div>
 
-  <body>
+		</div>
+	</div>
+</section>
+<section id="buttons">
+	<div class="container">
+		<h2>Buttons</h2>
+		<hr>
+		<div class="row">
+			<div class="col-4">
+				<h3>Button styles</h3>
+				<p>
+					<button class="btn flat">Flat</button>
+				</p>
+				<p>
+					<button class="btn">Default</button>
+				</p>
+				<p>
+					<button class="btn raised">Raised</button>
+				</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/edmondko/sass-pattern-library">View on GitHub</a>
+				<p class="btn-cnt">
+					<button class="btn circle flat"><i class="fa fa-remove"></i></button>
+					<button class="btn circle "><i class="fa fa-sun-o"></i></button>
+					<button class="btn circle raised"><i class="fa fa-university "></i></button>
+				</p>
+			</div>
+			<div class="col-4">
+				<h3>Button Colors</h3>
+				<p>
+					<button class="btn">Default</button>
+				</p>
+				<p>
+					<button class="btn positive">positive</button>
+				</p>
+				<p>
+					<button class="btn neutral">neutral</button>
+				</p>
+				<p>
+					<button class="btn negative">negative</button>
+				</p>
+			</div>
+			<div class="col-4">
+				<h3>Button sizes</h3>
+				<p>
+					<button class="btn small">Small</button>
+				</p>
+				<p>
+					<button class="btn">Default</button>
+				</p>
+				<p>
+					<button class="btn large">Large</button>
+				</p>
 
-          <h1 id="project_title">SCSSPattrns</h1>
-          <h2 id="project_tagline">This is a scalable and SCSS Framework I&#39;m building for fast-pace Front-end development</h2>
+			</div>
+			<!-- <div class="col-3">
+				<h3>HTML elements</h3>
+				<p><button class="btn">Button</button></p>
+				<p><a href="" class="btn positive">Anchor Button</a></p>
+				<p><input type="submit" class="btn negative" value="Submit button"></p>
+				<p><input type="button" class="btn neutral" value="Button input"></p>
+			</div> -->
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<pre>
+					<code class="language-markup">
+&lt;button class=&quot;btn flat&quot;&gt;Flat&lt;/button&gt;
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/edmondko/sass-pattern-library/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/edmondko/sass-pattern-library/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+&lt;button class=&quot;btn raised&quot;&gt;Raised&lt;/button&gt;
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+&lt;button class=&quot;btn circle flat&quot;&gt;&lt;i class=&quot;fa fa-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 
-<pre><code>$ cd edmondko/sass-pattern-library
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+&lt;button class=&quot;btn circle &quot;&gt;&lt;i class=&quot;fa fa-sun-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+&lt;button class=&quot;btn circle raised&quot;&gt;&lt;i class=&quot;fa fa-university &quot;&gt;&lt;/i&gt;&lt;/button&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="col-4">
+				<pre>
+					<code class="language-markup">
+&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+&lt;button class=&quot;btn positive&quot;&gt;positive&lt;/button&gt;
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+&lt;button class=&quot;btn neutral&quot;&gt;neutral&lt;/button&gt;
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+&lt;button class=&quot;btn negative&quot;&gt;negative&lt;/button&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="col-4">
+				<pre>
+					<code class="language-markup">
+&lt;button class=&quot;btn small&quot;&gt;Small&lt;/button&gt;
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+&lt;button class=&quot;btn large&quot;&gt;Large&lt;/button&gt;
+					</code>
+				</pre>
+			</div>
 
-<p>Edmond Ko - Web Developer from Sofia, Bulgaria</p>
+		</div>
+	</div>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+</section>
+<section id="forms">
+		<div class="container">
+			<h2 id="nav-forms">Forms</h2>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+			<hr>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">SCSSPattrns maintained by <a href="https://github.com/edmondko">edmondko</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+			<form action="">
+				<div class="row">
+					<div class="col-half">
+						<fieldset>
+							<legend>Inputs</legend>
+							<!--
+							For the floating labels to work properly without any javascript we need to:
+								1.  add "float-label" class to the "field-group" wrapper
+								2. The label tag must be insert after the input field with class "placeholder"
+								3. the input/textarea element must have required attribute
+							-->
+							<div class="field-group float-label">
+								<input type="text" id="demo-input-1" required pattern=".{1,}">
+								<label class="placeholder" for="demo-input-1">This is a label</label>
+								<p class="help">This is a contextual help for the field above.</p>
+							</div> <!-- end field-group -->
 
-    
+							<div class="field-group float-label field-error">
+								<input type="text" id="demo-input-2" required>
+								<label class="placeholder" for="demo-input-2">Error field</label>
 
-  </body>
+								<p class="help">This is an error message for the field above.</p>
+							</div> <!-- end field-group -->
+
+							<div class="field-group float-label">
+								<textarea name="demo-textarea" id="demo-textarea" required></textarea>
+								<label class="placeholder" for="demo-textarea">This is a label</label>
+							</div> <!-- end field-group -->
+						</fieldset>
+
+						<blockquote>
+							For the floating labels to work properly without any javascript we need to:
+							<ol>
+								<li>add "float-label" class to the "field-group" wrapper</li>
+								<li>The label tag must be insert after the input field with class "placeholder"</li>
+								<li>the input/textarea element must have required attribute</li>
+							</ol>
+						</blockquote>
+						<pre>
+							<code class="language-markup">
+&lt;div class=&quot;field-group float-label&quot;&gt;
+	&lt;input type=&quot;text&quot; id=&quot;demo-input-1&quot; required pattern=&quot;.{1,}&quot;&gt;
+	&lt;label class=&quot;placeholder&quot; for=&quot;demo-input-1&quot;&gt;This is a label&lt;/label&gt;
+	&lt;p class=&quot;help&quot;&gt;This is a contextual help for the field above.&lt;/p&gt;
+&lt;/div&gt;
+							</code>
+						</pre>
+					</div> <!-- end row-half -->
+
+					<div class="col-half">
+						<fieldset>
+							<legend>Radio buttons and checkboxes</legend>
+
+							<div class="field-group">
+								<input type="radio" name="demo-radio" id="demo-radio-1">
+								<label for="demo-radio-1">Radio 1</label>
+
+								<input type="radio" name="demo-radio" id="demo-radio-2">
+								<label for="demo-radio-2">Radio 2</label>
+
+								<input type="radio" name="demo-radio" id="demo-radio-3">
+								<label for="demo-radio-3">Radio 3</label>
+							</div>
+
+							<div class="field-group">
+								<input type="checkbox" id="demo-checkbox" name="demo-checkbox">
+								<label for="demo-checkbox">This is a checkbox</label>
+							</div>
+						</fieldset>
+						<blockquote>
+							If you want to use the custom Radio/Checkbox Inputs you need to put the &lt;label&gt; after the &lt;input&gt;
+						</blockquote>
+						<pre>
+							<code class="language-markup">
+&lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-1&quot;&gt;
+&lt;label for=&quot;demo-radio-1&quot;&gt;Radio 1&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-2&quot;&gt;
+&lt;label for=&quot;demo-radio-2&quot;&gt;Radio 2&lt;/label&gt;
+							</code>
+						</pre>
+					</div> <!-- end row-half -->
+				</div> <!-- end row -->
+			</form>
+
+			<div class="row">
+				<div class="col-third">
+					<form action="">
+						<fieldset>
+							<legend>Floating Labels Form </legend>
+
+							<div class="field-group float-label">
+								<input type="text" id="sign-in-username" name="sign-in-username" required>
+								<label class="placeholder" for="sign-in-username">Username: <span class="required">*</span></label>
+							</div>
+
+							<div class="field-group float-label">
+								<input type="password" pattern=".{3,}" id="sign-in-pwd" name="sign-in-pwd" required>
+								<label class="placeholder" for="sign-in-pwd">Password: <span class="required">*</span></label>
+							</div>
+
+							<div class="field-group">
+								<input type="checkbox" id="sign-in-checkbox" name="sign-in-checkbox" />
+								<label for="sign-in-checkbox">Remember me</label>
+							</div>
+							<div class="field-group  btn-cnt right">
+								<input type="submit" class="btn" value="Sign In">
+							</div>
+							<p><em><span class="required">*</span> required fields</em></p>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-third">
+					<form action="">
+						<fieldset>
+							<legend>Normal Sign-up Form</legend>
+
+							<div class="field-group">
+								<label for="sign-up-email">Email address: <span class="required">*</span></label>
+								<input type="email" id="sign-up-email" name="sign-up-email" required>
+								<p class="help">Please enter valid email</p>
+							</div>
+
+							<div class="field-group">
+								<label for="sign-up-name">Username: <span class="required">*</span></label>
+								<input type="text" id="sign-up-username" name="sign-up-username">
+							</div>
+
+							<div class="field-group">
+								<label for="sign-up-pwd">Password: <span class="required">*</span></label>
+								<input type="password" id="sign-up-pwd" name="sign-up-pwd" required>
+							</div>
+
+							<div class="field-group">
+								<label for="sign-up-confirm-pwd">Confirm Password: <span class="required">*</span></label>
+								<input type="password" id="sign-up-confirm-pwd" name="sign-up-confirm-pwd">
+							</div>
+
+							<div class="field-group btn-cnt right">
+								<input type="submit" class="btn positive raised" value="Sign Up">
+							</div>
+
+							<p><em><span class="required">*</span> required fields</em></p>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-third">
+					<form action="">
+						<fieldset>
+							<legend>Contact Form</legend>
+
+							<div class="field-group">
+								<label for="contact-name">Name: <span class="required">*</span></label>
+								<input type="text" id="contact-name" name="contact-name">
+							</div>
+
+							<div class="field-group">
+								<label for="contact-email">Email address: <span class="required">*</span></label>
+								<input type="email" id="contact-email" name="contact-email">
+							</div>
+
+							<div class="field-group">
+								<label for="contact-website">Website:</label>
+								<input type="url" id="contact-website" name="contact-website">
+							</div>
+
+							<div class="field-group">
+								<label for="contact-textarea">Message: <span class="required">*</span></label>
+								<textarea name="contact-textarea" id="contact-textarea" cols="30" rows="10" class="field-fw"></textarea>
+							</div>
+
+							<div class="field-group  btn-cnt right">
+								<button type="submit"  class="btn"><i class="fa fa-paper-plane"></i>Send Message</button>
+
+							</div>
+
+							<p><em><span class="required">*</span> required fields</em></p>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div> <!-- end container -->
+	</section>
+	<section id="icons">
+		<div class="container">
+			<h2>Icons - FontAwesome</h2>
+			<hr>
+			<div class="row">
+				<div class="col-4">
+					<h3>Bordered Icons</h3>
+					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
+					<div class="icon-rounded"><i class="fa fa-skype "></i></div>
+					<div class="icon-square"><i class="fa fa-plus-circle"></i></div>
+				</div>
+				<div class="col-4">
+					<h3>Icons Sizes</h3>
+					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
+					<div class="icon-rounded icon-large"><i class="fa fa-skype "></i></div>
+					<div class="icon-square icon-huge"><i class="fa fa-plus-circle"></i></div>
+				</div>
+				<div class="col-4">
+					<h3>Buttons with Icons</h3>
+					<p><button class="btn  positive"><i class="fa fa-check-square"></i>Positive Action</button></p>
+					<p>
+						<button class="btn  "><i class="fa fa-heart"></i> Neutral Action</button>
+					</p>
+					<p>
+						<button class="btn  negative"><i class="fa fa-ban"></i> Negative Action</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="alerts">
+		<div class="container">
+			<h2>Feedback Alerts</h2>
+			<hr>
+			<div class="row">
+				<div class="col-half">
+					<h3>Information</h3>
+					<div class="alert-info animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+					<pre>
+						<code class="language-markup">
+&lt;div class=&quot;alert-info animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
+
+				</div>
+				<div class="col-half">
+					<h3>Error</h3>
+					<div class="alert-error animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+					<pre>
+						<code class="language-markup">
+&lt;div class=&quot;alert-error animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-half">
+					<h3>Warning</h3>
+					<div class="alert-warning animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+					<pre>
+						<code class="language-markup">
+&lt;div class=&quot;alert-warning animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+				<div class="col-half">
+					<h3>Success</h3>
+					<div class="alert-success animated flipInX">
+						<p><strong>Information alert</strong></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+					<pre> <code class="language-markup">
+&lt;div class=&quot;alert-success animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="animations">
+		<div class="container">
+			<h2>Animations</h2>
+			<hr>
+			<div class="row animations">
+				<div class="col-2"><button class="btn large raised">bounce</button></div>
+				<div class="col-2"><button class="btn large raised neutral">flash</button></div>
+				<div class="col-2"><button class="btn large raised negative">pulse</button></div>
+				<div class="col-2"><button class="btn large raised positive">shake</button></div>
+				<div class="col-2"><button class="btn large raised negative">wobble</button></div>
+				<div class="col-2"><button class="btn large raised positive">tada</button></div>
+			</div>
+			<div class="row animations">
+
+				<div class="col-2"><button class="btn large raised">hinge</button></div>
+				<div class="col-2"><button class="btn large raised neutral">rollIn</button></div>
+				<div class="col-2"><button class="btn large raised negative">rollOut</button></div>
+				<div class="col-2"><button class="btn large raised">flip</button></div>
+				<div class="col-2"><button class="btn large raised neutral">flipInX</button></div>
+				<div class="col-2"><button class="btn large raised negative">flipInY</button></div>
+
+			</div>
+			<div class="row animations">
+				<div class="col-2"><button class="btn raised positive">lightSpeedIn</button></div>
+				<div class="col-2"><button class="btn raised negative">lightSpeedOut</button></div>
+				<div class="col-2"><button class="btn raised positive">fadeInDownBig</button></div>
+				<div class="col-2"><button class="btn raised positive">flipOutX</button></div>
+				<div class="col-4"><button class="btn raised negative">flipOutY</button></div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+</body>
 </html>
