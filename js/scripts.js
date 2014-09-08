@@ -10,13 +10,6 @@ $(document).ready(function($) {
 	$('.animations').find('.btn').on('click', function() {
 		loadAnimation(this);
 	});
-/*
-	$('#mainNav').find('.btn').on("click", function(event) {
-		// event.preventDefault();
-		var sectionId = $(this).attr('href');
-		scrollToSection(sectionId);
-	});
-*/
 
 	function loadAnimation (elem) {
 		var animationClass = 'animated '+ $(elem).text();
@@ -33,16 +26,15 @@ $(document).ready(function($) {
 		if (scrollTop > stickyNavTop) {
 			$('#stickyHeader').addClass('sticky');
 			$('body').css('paddingTop', headerHeight);
+			$('#mainNav').removeClass("center").addClass("right");
 		} else {
 			$('#stickyHeader').removeClass('sticky');
 			$('body').css('paddingTop', 0);
+			$('#mainNav').removeClass("right").addClass("center");
 		}
 	};
-/*	function scrollToSection (section) {
-		var scrollToHeight = $(section).position().top + 'px';
-			$(document).scrollTop(scrollToHeight);
-	}
-*/
+
+	/* Main Nav links scrolling the page */
 	var target, scroll;
 
    	$("a[href*=#]:not([href=#])").on("click", function(e) {
@@ -66,8 +58,6 @@ $(document).ready(function($) {
 					   "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
 					   "transition" : "0.6s ease-out"
 				   }).data("transitioning", true);
-
-
 			   } else {
 				   $("html, body").animate({
 					   scrollTop: scroll

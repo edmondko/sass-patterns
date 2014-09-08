@@ -132,6 +132,9 @@ a.btn,
 .btn-cnt {
 	display: block;
 	vertical-align: baseline;
+	&.center {
+		text-align: center;
+	}
 	&.left {
 		text-align: left;
 	}

@@ -1,4 +1,4 @@
-header {
+#stickyHeader {
 	z-index: 100;
 	display: block;
 	overflow: hidden;
@@ -16,12 +16,27 @@ header {
 		padding: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba(0,0,0,.75);
+		background-color: rgba(0,0,0,.85);
 		h1 {
-			display: none;
+			float: left;
+			font-size: 2em;
+			padding: 0 1em;
+			color: #FFF;
 		}
 	}
 }
+#mainNav { padding: .5em; }
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.85);
+	.btn-cnt { padding: 1em; margin: 0;}
+	.flat.btn { color: #FFF; }
+	small { color: #FFF;padding: 0 $baseline; }
+}
+body { padding-bottom: 4em;}
 
 .animations {
 	.btn { width: 100%; }
