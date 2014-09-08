@@ -18,9 +18,10 @@ p {
 }
 a,
 a:visited {
-	color: $link-color;
+	color: $btn-default-bg;
+	text-decoration: none;
 	&:hover {
-		color: $text-color;
+		color: $link-color;
 	}
 }
 hr {
