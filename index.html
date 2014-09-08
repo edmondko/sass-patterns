@@ -6,8 +6,10 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/prism.css">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="js/min/scripts.min.js"></script>
+	<script src="js/min/prism.js"></script>
 </head>
 <body>
 
@@ -82,9 +84,40 @@
 					<li>Item 5</li>
 				</ol>
 			</div>
-			<div class="col-12">
+			<div class="col-4">
+				<h3>Blockquote Example</h3>
 				<blockquote>This is blockquote</blockquote>
 			</div>
+			<div class="col-4">
+			<h3>.SCSS Code Example</h3>
+				<pre>
+					<code class="language-scss">
+&.positive {
+	background-color: $btn-positive-bg;
+	&:hover {
+			background-color: lighten($btn-positive-bg, 5%);
+	}
+	&:active {
+			background-color: darken($btn-positive-bg, 5%);
+	}
+}
+					</code>
+				</pre>
+			</div>
+			<div class="col-4">
+			<h3>HTML Code Example</h3>
+				<!-- For markup you need to remove all the < > and replace them wqith html entities like &lt; &gt;  -->
+				<pre>
+					<code class="language-markup">
+&lt;p class=&quot;btn-cnt left&quot;&gt;
+	&lt;button class=&quot;btn small&quot;&gt;Small&lt;/button&gt;
+	&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+	&lt;button class=&quot;btn large negative flat&quot;&gt;Large&lt;/button&gt;
+&lt;/p&gt;
+					</code>
+				</pre>
+			</div>
+
 		</div>
 	</div>
 </section>
