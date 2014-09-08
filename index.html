@@ -12,40 +12,66 @@
 	<script src="js/min/prism.js"></script>
 </head>
 <body>
+<header id="stickyHeader">
 
-<section>
+	<nav id="mainNav">
+		<ul class="cf">
+			<li><a class="btn raised" href="#grid">Grid</a></li>
+			<li><a class="btn raised" href="#typography">Typography</a></li>
+			<li><a class="btn raised" href="#buttons">Buttons</a></li>
+			<li><a class="btn raised" href="#forms">Forms</a></li>
+			<li><a class="btn raised" href="#icons">Icons</a></li>
+			<li><a class="btn raised" href="#alerts">Alerts</a></li>
+			<li><a class="btn raised" href="#animations">Animations</a></li>
+		</ul>
+	</nav>
+
+</header>
+<section id="grid">
 	<div class="container">
 		<h1>Grid system</h1>
 		<hr>
 		<div class="row">
-			<div class="col-12"><div class="demo-col">col full</div></div>
+			<div class="col-12"><div class="demo-col">col-12 / col-full</div></div>
 		</div>
 		<div class="row">
-			<div class="col-6"><div class="demo-col">.col-half</div></div>
-			<div class="col-6"><div class="demo-col">.col-half</div></div>
+			<div class="col-6"><div class="demo-col">col-6 / col-half</div></div>
+			<div class="col-6"><div class="demo-col">col-6 / col-half</div></div>
 		</div>
 		<div class="row">
-			<div class="col-8"><div class="demo-col">.col-8</div></div>
-			<div class="col-4"><div class="demo-col">.col-4</div></div>
+			<div class="col-8"><div class="demo-col">col-8 / col-two-thirds</div></div>
+			<div class="col-4"><div class="demo-col">col-4 / col-third</div></div>
 		</div>
 		<div class="row">
-			<div class="col-3"><div class="demo-col">.col-quarter</div></div>
+			<div class="col-3"><div class="demo-col">col-quarter/col-3</div></div>
 			<div class="col-9">
-			<div class="row">
-				<div class="col-half">
-					<div class="demo-col">half of 2/3</div>
+				<div class="row">
+					<div class="col-half">
+						<div class="demo-col">half of 2/3</div>
+					</div>
+					<div class="col-half">
+						<div class="demo-col">half of 2/3</div>
+					</div>
 				</div>
-				<div class="col-half">
-					<div class="demo-col">half of 2/3</div>
-				</div>
-			</div>
-
-
 			</div>
 		</div>
+		<pre><code class="language-markup">
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-12&quot;&gt;col full&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-6&quot;&gt;.col-half&lt;/div&gt;
+	&lt;div class=&quot;col-6&quot;&gt;.col-half&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-8&quot;&gt;.col-8&lt;/div&gt;
+	&lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
 	</div>
 </section>
-<section>
+<section id="typography">
 	<div class="container">
 	<h1>Typography</h1>
 	<hr>
@@ -121,61 +147,113 @@
 		</div>
 	</div>
 </section>
-<section>
+<section id="buttons">
 	<div class="container">
 		<h1>Buttons</h1>
 		<hr>
 		<div class="row">
-			<div class="col-third">
+			<div class="col-4">
 				<h3>Button styles</h3>
-				<p  class="btn-cnt left">
+				<p>
+					<button class="btn flat">Flat</button>
+				</p>
+				<p>
 					<button class="btn">Default</button>
-					<button class="btn positive">positive</button>
-					<button class="btn neutral">neutral</button>
-					<button class="btn negative">negative</button>
+				</p>
+				<p>
+					<button class="btn raised">Raised</button>
+				</p>
 
+				<p class="btn-cnt">
+					<button class="btn circle flat"><i class="fa fa-remove"></i></button>
+					<button class="btn circle "><i class="fa fa-sun-o"></i></button>
+					<button class="btn circle raised"><i class="fa fa-university "></i></button>
 				</p>
 			</div>
-			<div class="col-third">
-				<h3>Button sizes</h3>
-				<p class="btn-cnt left">
-					<button class="btn small">Small</button>
+			<div class="col-4">
+				<h3>Button Colors</h3>
+				<p>
 					<button class="btn">Default</button>
-					<button class="btn large negative flat">Large</button>
+				</p>
+				<p>
+					<button class="btn positive">positive</button>
+				</p>
+				<p>
+					<button class="btn neutral">neutral</button>
+				</p>
+				<p>
+					<button class="btn negative">negative</button>
 				</p>
 			</div>
-			<div class="col-third">
-				<h3>HTML elements looking like buttons</h3>
+			<div class="col-4">
+				<h3>Button sizes</h3>
+				<p>
+					<button class="btn small">Small</button>
+				</p>
+				<p>
+					<button class="btn">Default</button>
+				</p>
+				<p>
+					<button class="btn large">Large</button>
+				</p>
+
+			</div>
+			<!-- <div class="col-3">
+				<h3>HTML elements</h3>
 				<p><button class="btn">Button</button></p>
 				<p><a href="" class="btn positive">Anchor Button</a></p>
 				<p><input type="submit" class="btn negative" value="Submit button"></p>
 				<p><input type="button" class="btn neutral" value="Button input"></p>
-			</div>
+			</div> -->
 		</div>
 		<div class="row">
-			<div class="col-12">
-			<p class="btn-cnt">
-				<button class="btn flat">Flat Button</button>
-				<button class="btn raised">Raised</button>
-				<button class="btn positive flat">Flat Positive</button>
-				<button class="btn small flat">small flat default</button>
-				<button class="btn large neutral"><i class="fa fa-play"></i>Flat Positive</button>
-				<button class="btn large raised positive">Positive raised large</button>
-			</p>
-			<p class="btn-cnt">
-				<button class="btn circle flat negative"><i class="fa fa-remove"></i></button>
-				<button class="btn circle raised"><i class="fa fa-university "></i></button>
-				<button class="btn circle neutral flat"><i class="fa fa-sun-o"></i></button>
-				<button class="btn circle raised negative"><i class="fa fa-support "></i></button>
-				<button class="btn circle neutral"><i class="fa fa-smile-o "></i></button>
-				<button class="btn circle raised positive"><i class="fa fa-spoon "></i></button>
+			<div class="col-4">
+				<pre>
+					<code class="language-markup">
+&lt;button class=&quot;btn flat&quot;&gt;Flat&lt;/button&gt;
+
+&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+
+&lt;button class=&quot;btn raised&quot;&gt;Raised&lt;/button&gt;
+
+&lt;button class=&quot;btn circle flat&quot;&gt;&lt;i class=&quot;fa fa-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+
+&lt;button class=&quot;btn circle &quot;&gt;&lt;i class=&quot;fa fa-sun-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+
+&lt;button class=&quot;btn circle raised&quot;&gt;&lt;i class=&quot;fa fa-university &quot;&gt;&lt;/i&gt;&lt;/button&gt;
+					</code>
+				</pre>
 			</div>
-			</p>
+			<div class="col-4">
+				<pre>
+					<code class="language-markup">
+&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+
+&lt;button class=&quot;btn positive&quot;&gt;positive&lt;/button&gt;
+
+&lt;button class=&quot;btn neutral&quot;&gt;neutral&lt;/button&gt;
+
+&lt;button class=&quot;btn negative&quot;&gt;negative&lt;/button&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="col-4">
+				<pre>
+					<code class="language-markup">
+&lt;button class=&quot;btn small&quot;&gt;Small&lt;/button&gt;
+
+&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+
+&lt;button class=&quot;btn large&quot;&gt;Large&lt;/button&gt;
+					</code>
+				</pre>
+			</div>
+
 		</div>
 	</div>
 
 </section>
-<section>
+<section id="forms">
 		<div class="container">
 			<h1 id="nav-forms">Forms</h1>
 
@@ -210,6 +288,24 @@
 								<label class="placeholder" for="demo-textarea">This is a label</label>
 							</div> <!-- end field-group -->
 						</fieldset>
+
+						<blockquote>
+							For the floating labels to work properly without any javascript we need to:
+							<ol>
+								<li>add "float-label" class to the "field-group" wrapper</li>
+								<li>The label tag must be insert after the input field with class "placeholder"</li>
+								<li>the input/textarea element must have required attribute</li>
+							</ol>
+						</blockquote>
+						<pre>
+							<code class="language-markup">
+&lt;div class=&quot;field-group float-label&quot;&gt;
+	&lt;input type=&quot;text&quot; id=&quot;demo-input-1&quot; required pattern=&quot;.{1,}&quot;&gt;
+	&lt;label class=&quot;placeholder&quot; for=&quot;demo-input-1&quot;&gt;This is a label&lt;/label&gt;
+	&lt;p class=&quot;help&quot;&gt;This is a contextual help for the field above.&lt;/p&gt;
+&lt;/div&gt;
+							</code>
+						</pre>
 					</div> <!-- end row-half -->
 
 					<div class="col-half">
@@ -232,6 +328,18 @@
 								<label for="demo-checkbox">This is a checkbox</label>
 							</div>
 						</fieldset>
+						<blockquote>
+							If you want to use the custom Radio/Checkbox Inputs you need to put the &lt;label&gt; after the &lt;input&gt;
+						</blockquote>
+						<pre>
+							<code class="language-markup">
+&lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-1&quot;&gt;
+&lt;label for=&quot;demo-radio-1&quot;&gt;Radio 1&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-2&quot;&gt;
+&lt;label for=&quot;demo-radio-2&quot;&gt;Radio 2&lt;/label&gt;
+							</code>
+						</pre>
 					</div> <!-- end row-half -->
 				</div> <!-- end row -->
 			</form>
@@ -336,39 +444,37 @@
 			</div>
 		</div> <!-- end container -->
 	</section>
-	<section>
+	<section id="icons">
 		<div class="container">
 			<h1>Icons - FontAwesome</h1>
 			<hr>
 			<div class="row">
-				<div class="col-3">
+				<div class="col-4">
 					<h3>Bordered Icons</h3>
 					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
 					<div class="icon-rounded"><i class="fa fa-skype "></i></div>
 					<div class="icon-square"><i class="fa fa-plus-circle"></i></div>
 				</div>
-				<div class="col-3">
+				<div class="col-4">
 					<h3>Icons Sizes</h3>
 					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
 					<div class="icon-rounded icon-large"><i class="fa fa-skype "></i></div>
 					<div class="icon-square icon-huge"><i class="fa fa-plus-circle"></i></div>
 				</div>
-				<div class="col-3">
-					<h3>Bordered Icons</h3>
-					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
-					<div class="icon-rounded"><i class="fa fa-skype "></i></div>
-					<div class="icon-square"><i class="fa fa-plus-circle"></i></div>
-				</div>
-				<div class="col-3">
-					<h3>Icons Sizes</h3>
-					<div class="icon-circle"><i class="fa fa-paper-plane"></i></div>
-					<div class="icon-rounded icon-large"><i class="fa fa-skype "></i></div>
-					<div class="icon-square icon-huge"><i class="fa fa-plus-circle"></i></div>
+				<div class="col-4">
+					<h3>Buttons with Icons</h3>
+					<p><button class="btn  positive"><i class="fa fa-check-square"></i>Positive Action</button></p>
+					<p>
+						<button class="btn  "><i class="fa fa-heart"></i> Neutral Action</button>
+					</p>
+					<p>
+						<button class="btn  negative"><i class="fa fa-ban"></i> Negative Action</button>
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section>
+	<section id="alerts">
 		<div class="container">
 			<h1>Feedback Alerts</h1>
 			<hr>
@@ -379,6 +485,14 @@
 						<p><strong>Information alert</strong></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
+					<pre>
+						<code class="language-markup">
+&lt;div class=&quot;alert-info animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
 
 				</div>
 				<div class="col-half">
@@ -387,6 +501,14 @@
 						<p><strong>Information alert</strong></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
+					<pre>
+						<code class="language-markup">
+&lt;div class=&quot;alert-error animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
 				</div>
 			</div>
 			<div class="row">
@@ -396,6 +518,14 @@
 						<p><strong>Information alert</strong></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
+					<pre>
+						<code class="language-markup">
+&lt;div class=&quot;alert-warning animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
 				</div>
 				<div class="col-half">
 					<h3>Success</h3>
@@ -403,11 +533,18 @@
 						<p><strong>Information alert</strong></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
+					<pre> <code class="language-markup">
+&lt;div class=&quot;alert-success animated flipInX&quot;&gt;
+	&lt;p&gt;&lt;strong&gt;Information alert&lt;/strong&gt;&lt;/p&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section>
+	<section id="animations">
 		<div class="container">
 			<h1>Animations</h1>
 			<hr>

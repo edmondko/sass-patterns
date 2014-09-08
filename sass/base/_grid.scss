@@ -3,6 +3,13 @@
 *:before {
 	box-sizing: border-box;
 }
+.cf {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
 
 /* Set main container styles */
 .container {
@@ -56,8 +63,8 @@
 }
 
 .demo-col {
-	background-color: #BFFCAD;
-	padding: 10px;
+	background-color: $btn-positive-bg;
+	padding: 1em;
 	text-align: center;
 	border-radius: 3px;
 }

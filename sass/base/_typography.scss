@@ -68,13 +68,53 @@ ul,
 ol {
 	margin: 0 0 $baseline $baseline;
 }
-ul { list-style: disc outside none; }
-ol { list-style: decimal outside none; }
+ul {
+	list-style: disc outside none;
+}
+ol {
+	list-style: decimal inside none;
+}
 blockquote {
 	color: $light-text;
 	font-style: italic;
-	margin-left: $baseline;
 }
-small { font-size: $h5-size; }
-strong { font-weight: bold; }
-em { font-style: italic; }
+blockquote {
+	display: block;
+	background-color: rgba(0,0,0,.03);
+	padding: 1.5em 1.5em 1.5em 2em;
+	margin: 0 0 $baseline;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,.1);
+	ul,
+	ol,
+	p {
+		margin: 0;
+	}
+	&:before {
+		content: "\201C"; /*Unicode for Left Double Quote*/
+		font-family: Georgia, serif;
+		font-size: 40px;
+		font-weight: bold;
+		color: #999999;
+		position: absolute;
+		left: 5px;
+		top: 10px;
+	}
+
+	&:after {
+		content: "";
+	}
+	text-align: justify;
+}
+
+
+small {
+	font-size: $h5-size;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
