@@ -56,7 +56,7 @@ $(document).ready(function($) {
 
 				   var avail = $(document).height() - $(window).height();
 
-				   scroll = target.offset().top - 60;
+				   scroll = target.offset().top - 80;
 
 				   if (scroll > avail) {
 					   scroll = avail;
@@ -66,6 +66,8 @@ $(document).ready(function($) {
 					   "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
 					   "transition" : "0.6s ease-out"
 				   }).data("transitioning", true);
+
+
 			   } else {
 				   $("html, body").animate({
 					   scrollTop: scroll

@@ -1,3 +1,28 @@
+header {
+	z-index: 100;
+	display: block;
+	overflow: hidden;
+	transition: all .4s ease;
+	background-color: transparent;
+	padding: 1em;
+	h1 {
+		text-align: center;
+		font-family: "Lobster";
+		font-size: 4em; margin: 0 0 .3em;
+	}
+	&.sticky {
+		position: fixed;
+		top: 0;
+		padding: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0,.75);
+		h1 {
+			display: none;
+		}
+	}
+}
+
 .animations {
 	.btn { width: 100%; }
 }
