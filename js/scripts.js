@@ -4,9 +4,9 @@ $(document).ready(function($) {
         $('.animations').find('.btn').on('click', function() {
             loadAnimation(this);
         });
-        $('#mainNav').find('.btn').on('click',function () {
+       /* $('#mainNav').find('.btn').on('click',function () {
             $(this).addClass('animated bounceOutUp');
-        })
+        })*/
 
         function loadAnimation(elem) {
             var animationClass = 'animated ' + $(elem).text();
