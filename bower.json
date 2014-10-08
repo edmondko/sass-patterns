@@ -1,0 +1,13 @@
+{
+    "name": "basic-sass-patterns",
+    "description": "Base for fast styling development. Check out demos at http://edmondko.github.io/ng-sass-patterns",
+    "version": "0.1.0",
+    "dependencies": {
+
+    },
+    "authors": [{
+        "name": "Edmond Ko",
+        "email": "ko.edmond@gmail.com",
+        "homepage": "http://github.com/edmondko"
+    }]
+}
