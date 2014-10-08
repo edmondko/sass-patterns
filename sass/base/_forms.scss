@@ -11,11 +11,7 @@ form {
 			color: $light-text;
 			font-size: .75em;
 			text-transform: uppercase;
-			&.placeholder {
-				position: absolute;
-				top: 30px;
-				transition: top .1s ease-out;
-			}
+
 		}
 
 
@@ -49,6 +45,11 @@ form {
 		/* Floating label styles */
 		&.float-label {
 			padding-top: 24px;
+			label.placeholder {
+				position: absolute;
+				top: 30px;
+				transition: top .1s ease-out;
+			}
 			input:not([class^="btn"]),
 			textarea {
 				border-width: 0 1px 1px 0;
@@ -81,6 +82,7 @@ form {
 			}
 		}
 	}
+
 	fieldset {
 		border: 1px solid $field-border-color;
 		padding: $baseline;
@@ -121,7 +123,7 @@ form {
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		display: inline-block;
-		background-image: url("../img/inputs.png");
+		background-image: url("../images/inputs.png");
 		vertical-align: middle;
 		text-align: center;
 	}
